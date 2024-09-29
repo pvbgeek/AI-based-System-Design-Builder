@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AISysD System Design Simulator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Updated Font Awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>   
+    <div class="container">
+        <!-- Left column for component selection -->
+        <div class="component-panel">
+            <h3>Select Components</h3>
+            <div id="components">
+                <!-- Circular icons for different components with tooltips -->
+                <div class="component" id="load_balancer" data-tooltip="Load Balancer">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <div class="component" id="server" data-tooltip="Server">
+                    <i class="fa-solid fa-server"></i>
+                </div>
+                <div class="component" id="client" data-tooltip="Client">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="component" id="cache" data-tooltip="Cache">
+                    <i class="fa-solid fa-memory"></i>
+                </div>                
+                <div class="component" id="database" data-tooltip="Database">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <div class="component" id="aws" data-tooltip="AWS">
+                    <i class="fa-brands fa-aws"></i>
+                </div>
+                <div class="component" id="api_gateway" data-tooltip="API Gateway">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="component" id="msg_queue" data-tooltip="Message Queue">
+                    <i class="fa-solid fa-message"></i>
+                </div>
+                <div class="component" id="cdn" data-tooltip="CDN">
+                    <i class="fa-solid fa-cloud-upload-alt"></i> <i class="fa-solid fa-cloud-download-alt"></i>
+                </div>
+                <div class="component" id="dns" data-tooltip="DNS">
+                    <i class="fas fa-globe"></i><i class="fas fa-address-book"></i>
+                </div>
+                <div class="component" id="firewall" data-tooltip="Firewall">
+                <i class="fas fa-shield-halved"></i><i class="fas fa-fire"></i>
+                </div>
+                <div class="component" id="aths" data-tooltip="Authentication Server">
+                    <i class="fas fa-server"></i><i class="fas fa-user"></i>
+                    </div>
+            </div>
+            <div class="buttons">
+                <button id="build-connection" class="button">
+                    Build Connection
+                </button>
+                <button id="delete" class="button">
+                    Delete Component
+                </button> 
+            </div>
+        </div>
+
+        <div class="graph-input-container">
+            <!-- Main window for graph visualization -->
+            <div class="main-window" id="graph-window">
+                <!-- D3.js will render the graph here -->
+            </div>
+    
+            <!-- Bottom bar for input -->
+            <div class="input-bar">
+                <textarea id="user-input" placeholder="Describe your system..."></textarea>
+                <div class="input-buttons">
+                    <div id="mic-stop-wrapper">
+                    <button id="mic-button"><i class="fa-solid fa-microphone"></i></button>
+                    <button id="stop-button" style="display:none;"><i class="fa-solid fa-times"></i></button>
+                    </div>
+                    <!-- New Send button with an up arrow -->
+                    <button id="send-button">
+                        <i class="fas fa-arrow-up"></i> Send
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="{{ url_for('static', filename='scripts/graph.js') }}"></script>
+    <script src="{{ url_for('static', filename='components/build_path.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/api.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/mic.js') }}"></script>
+</body>
+</html>
