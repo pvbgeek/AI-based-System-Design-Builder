@@ -19,7 +19,7 @@ Before running this project, make sure you have the following installed:
     
     - Start the local server in Nvidia AI Workbench
     ![](img/image.png)
-    <img src="image.png" width="200">
+   
 
     - Start new project, where you can clone the new repository from github.
     ![alt text](img/image-2.png)
