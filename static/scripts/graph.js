@@ -369,7 +369,7 @@ function createComponentInGraphWindow(componentId, componentName, componentColor
     // Add draggable functionality
     newComponent.style.position = 'absolute';  // Absolute positioning
     const componentSize = 60; // Size of the component
-    const labelHeight = 30; // Approximate height of the label
+    const labelHeight = label.offsetHeight; // Approximate height of the label
     const bottomBarHeight = document.querySelector('.input-bar').offsetHeight; // Get the height of the bottom bar
 
     // Ensure the component and label appear within the correct boundaries (considering the bottom bar and label height)
@@ -387,6 +387,8 @@ function createComponentInGraphWindow(componentId, componentName, componentColor
 
     newComponent.style.top = top + 'px';
     newComponent.style.left = left + 'px';
+
+    newComponent.lastElementChild
 
     makeDraggable(newComponent);  // Make the component draggable
 
@@ -417,17 +419,16 @@ function makeDraggable(element) {
         mouseX = e.clientX;
         mouseY = e.clientY;
 
+        const label = element.lastElementChild;
+
         // Get current component dimensions and position
         const elementWidth = element.offsetWidth;
         const elementHeight = element.offsetHeight;
-        const labelHeight = 30; // Approximate height of the label
+        const labelHeight = label.offsetHeight + 5; // Approximate height of the label
 
         // Get the boundaries of the main window
         const windowWidth = graphWindow.offsetWidth;
-        const windowHeight = graphWindow.offsetHeight;
-        
-        // Get the height of the black input bar (bottom bar)
-        const bottomBarHeight = document.querySelector('.input-bar').offsetHeight;
+        const windowHeight = graphWindow.offsetHeight - 10;
 
         // Calculate new top and left positions, ensuring the component stays inside the main window
         let newTop = element.offsetTop - offsetY;
@@ -436,7 +437,7 @@ function makeDraggable(element) {
         // Boundary checks to prevent dragging outside the main window (considering the label)
         if (newTop < 0) newTop = 0; // Prevent moving above the top boundary
         if (newLeft < 0) newLeft = 0; // Prevent moving to the left of the boundary
-        if (newTop + elementHeight + labelHeight > windowHeight - bottomBarHeight) newTop = windowHeight - bottomBarHeight - elementHeight - labelHeight; // Prevent moving below the black line
+        if (newTop + elementHeight + labelHeight > windowHeight) newTop = windowHeight - elementHeight - labelHeight; // Prevent moving below the black line
         if (newLeft + elementWidth > windowWidth) newLeft = windowWidth - elementWidth; // Prevent moving beyond the right boundary
 
         // Update the element's position temporarily to check for overlaps

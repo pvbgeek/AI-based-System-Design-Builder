@@ -374,3 +374,10 @@ svg {
     margin-top: 80px;
 }
 
+#loading-state {
+    display: none;
+}
+
+#static-state {
+    display: block;
+}

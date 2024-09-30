@@ -8,6 +8,7 @@ const componentsMap = new Map(Array.from(document.querySelectorAll('.component')
 
 // Function to send input to Flask and receive graph JSON
 async function fetchGraphJson(userInput) {
+    setLoadingState(true);
     try {
         const response = await fetch(apiUrl, {
             method: 'POST',
@@ -23,10 +24,25 @@ async function fetchGraphJson(userInput) {
 
         const graph = await response.json();
         console.log("Received graph JSON:", graph);
+        setLoadingState(false);
         return graph;
 
     } catch (error) {
         console.error("Error fetching graph JSON:", error);
+        setLoadingState(false);
+    }
+}
+
+const setLoadingState = (showLoading) => {
+    const staticState = document.getElementById('static-state');
+    const loadingState = document.getElementById('loading-state');
+
+    if(showLoading) {
+        staticState.style.display = 'none';
+        loadingState.style.display = 'block';
+    } else {
+        staticState.style.display = 'block';
+        loadingState.style.display = 'none';
     }
 }
 
