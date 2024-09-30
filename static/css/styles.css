@@ -381,3 +381,29 @@ svg {
 #static-state {
     display: block;
 }
+
+.powered-by-container {
+    color: white;
+    margin-top: 30px;
+    display: grid;
+    justify-items: center;
+}
+
+.powered-by-container img {
+    width: 100%;
+}
+
+.powered-by-container .logo {
+    width: 65%;
+    margin: 10px;
+}
+
+.powered-by-sub-heading {
+    font-size: small;
+}
+
+#deployed-text {
+    max-width: 150px;
+    text-align: center;
+    text-transform: initial;
+}
