@@ -2,6 +2,8 @@
 
 This project provides an interactive platform for building and simulating system designs using AI. Powered by NVIDIA AI Workbench, it leverages advanced AI capabilities to generate optimized, scalable system architectures. 
 
+Blogpost [Click here](https://atharva-weginwar.github.io/devpost.html)
+
 ## Prerequisites
 
 Before running this project, make sure you have the following installed:
