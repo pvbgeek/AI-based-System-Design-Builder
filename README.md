@@ -4,6 +4,10 @@ This project provides an interactive platform for building and simulating system
 
 Blogpost [Click here](https://atharva-weginwar.github.io/devpost.html)
 
+YouTube [Click here](https://www.youtube.com/watch?v=taDNjlxNME4&t=1s)
+
+Devpost [Click here](https://devpost.com/software/ai-based-system-design-simulator)
+
 ## Prerequisites
 
 Before running this project, make sure you have the following installed:
