@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI System Design Builder: Hackathon Project</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .team-member {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .step {
+            background-color: #e8f4f8;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .linkedin-profile {
+            display: inline-block;
+            margin-top: 5px;
+            color: #0077b5;
+            text-decoration: none;
+        }
+        .linkedin-profile:hover {
+            text-decoration: underline;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .tech-item {
+            text-align: center;
+            width: calc(33.33% - 20px);
+            max-width: 150px;
+        }
+        .tech-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI System Design Builder: Revolutionizing System Architecture Design</h1>
+
+        <img src="banner-image.jpeg" alt="AI System Design Builder Banner" class="banner-image">
+
+        <h2>Inspiration</h2>
+        <p>In the fast-paced world of software development, creating efficient and scalable system architectures is crucial. We recognized the need for a tool that could streamline this process, making it accessible to both seasoned architects and newcomers alike. The idea of leveraging AI to assist in system design sparked our imagination, leading to the birth of the AI System Design Builder.</p>
+
+        <h2>What it does</h2>
+        <p>The AI System Design Builder is an interactive platform that empowers users to create and visualize system architectures with ease. Here's what it offers:</p>
+        <ol>
+            <li><strong>Component Selection</strong>: Users can manually choose from a curated list of essential system components.</li>
+            <li><strong>Manual Design</strong>: Build connections between components, creating custom system designs.</li>
+            <li><strong>AI-Powered Design Generation</strong>: Leverage GenAI to automatically generate system design graphs.</li>
+            <li><strong>Voice Input</strong>: Describe system requirements verbally.</li>
+            <li><strong>Visual Representation</strong>: Intuitive graph representation of system architectures.</li>
+        </ol>
+
+        <img src="AI System Design Builder Interface.jpeg" alt="AI System Design Builder Interface">
+
+        <h2>How to Use</h2>
+        <div class="step">
+            <h3>Step 1: Set Up NVIDIA AI Workbench</h3>
+            <p>Follow the <a href="https://docs.nvidia.com/ai-workbench/user-guide/latest/installation/overview.html">Installation guide</a> to set up the Workbench on your local machine or cloud environment.</p>
+            <img src="NVIDIA AI Workbench Setup.jpeg" alt="NVIDIA AI Workbench Setup">
+        </div>
+
+        <div class="step">
+            <h3>Step 2: Clone the Repository</h3>
+            <code>
+                git clone https://github.com/pvbgeek/AI-based-System-Design-Builder.git<br>
+                cd AI-based-System-Design-Builder
+            </code>
+        </div>
+
+        <div class="step">
+            <h3>Step 3: Launch NVIDIA Workbench using WSL</h3>
+            <code>wsl -d NVIDIA-Workbench --cd ~</code>
+        </div>
+
+        <div class="step">
+            <h3>Step 4: Activate the NVIDIA Workbench Environment</h3>
+            <code>nvwb activate local && nvwb open AI-Based-System-Design-Builder</code>
+        </div>
+
+        <div class="step">
+            <h3>Step 5: Install Dependencies</h3>
+            <code>pip install -r requirements.txt</code>
+        </div>
+
+        <div class="step">
+            <h3>Step 6: Run the Application</h3>
+            <code>python main.py</code>
+            <p>Access the application at https://localhost:5000</p>
+        </div>
+
+        <h2>How we built it</h2>
+        <p>We developed the AI System Design Builder using a combination of cutting-edge technologies and platforms:</p>
+        <div class="tech-stack">
+            <div class="tech-item">
+                <img src="NVIDIA_AI_Workbench.png" alt="NVIDIA AI Workbench">
+                <p>NVIDIA AI Workbench</p>
+            </div>
+            <div class="tech-item">
+                <img src="Python-Symbol.png" alt="Python">
+                <p>Python</p>
+            </div>
+            <div class="tech-item">
+                <img src="Flask.png" alt="Flask">
+                <p>Flask</p>
+            </div>
+            <div class="tech-item">
+                <img src="HTMl and CSS.jpeg" alt="HTML">
+                <p>HTML and CSS</p>
+            </div>
+            <div class="tech-item">
+                <img src="Javascript.jpeg" alt="JavaScript">
+                <p>JavaScript</p>
+            </div>
+            <div class="tech-item">
+                <img src="Ollama.png" alt="GenAI">
+                <p>GenAI</p>
+            </div>
+            <div class="tech-item">
+                <img src="docker.png" alt="Docker">
+                <p>Docker</p>
+            </div>
+        </div>
+
+        <h2>Challenges we ran into</h2>
+        <ol>
+            <li><strong>Integrating AI Capabilities</strong>: Incorporating GenAI for accurate system design generation.</li>
+            <li><strong>Balancing Flexibility and Constraints</strong>: Ensuring versatility while maintaining a predefined component set.</li>
+            <li><strong>Optimizing Performance</strong>: Achieving quick and efficient AI-generated designs.</li>
+        </ol>
+
+        <h2>Accomplishments that we're proud of</h2>
+        <ol>
+            <li><strong>Intuitive User Interface</strong>: Creating an accessible system design tool.</li>
+            <li><strong>AI-Powered Design Generation</strong>: Successfully implementing AI for system architecture creation.</li>
+            <li><strong>NVIDIA AI Workbench Integration</strong>: Leveraging advanced AI capabilities.</li>
+        </ol>
+
+        <h2>What we learned</h2>
+        <ol>
+            <li><strong>AI in System Design</strong>: Applying AI to traditionally human-centric tasks.</li>
+            <li><strong>Working with NVIDIA AI Workbench</strong>: Harnessing its power for AI-driven development.</li>
+            <li><strong>Balancing User Input and AI Assistance</strong>: Creating a powerful hybrid approach.</li>
+        </ol>
+
+        <h2>What's next for AI System Design Builder</h2>
+        <ol>
+            <li><strong>Expanded Component Library</strong></li>
+            <li><strong>Enhanced AI Capabilities</strong></li>
+            <li><strong>Collaboration Features</strong></li>
+            <li><strong>Performance Analysis</strong></li>
+            <li><strong>Integration with Development Tools</strong></li>
+        </ol>
+
+        <h2>Meet the Team</h2>
+        <div class="team-member">
+            <img src="parth.jpeg" alt="Parth Bhalerao" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; float: left; margin-right: 15px;">
+            <h3>Parth Bhalerao</h3>
+            <p>Worked on front-end and back-end JS development, creating a seamless user experience and robust application logic.</p>
+            <a href="https://www.linkedin.com/in/parthvb/" class="linkedin-profile" target="_blank">LinkedIn Profile</a>
+        </div>
+        <div class="team-member">
+            <img src="Atharva.jpeg" alt="Atharva Weginwar" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; float: left; margin-right: 15px;">
+            <h3>Atharva Weginwar</h3>
+            <p>Developed the GenAI feature, enabling AI-powered system design generation based on user requirements.</p>
+            <a href="https://www.linkedin.com/in/atharvaweginwar/" class="linkedin-profile" target="_blank">LinkedIn Profile</a>
+        </div>
+        <div class="team-member">
+            <img src="Ashutosh.jpeg" alt="Ashutosh Talwalkar" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; float: left; margin-right: 15px;">
+            <h3>Ashutosh Talwalkar</h3>
+            <p>Focused on front-end development, crafting an intuitive and visually appealing user interface.</p>
+            <a href="https://www.linkedin.com/in/ashutosh-talwalkar-42ab72b7/" class="linkedin-profile" target="_blank">LinkedIn Profile</a>
+        </div>
+        <div class="team-member">
+            <img src="yugandhar.jpeg" alt="Yugandhar Desai" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; float: left; margin-right: 15px;">
+            <h3>Yugandhar Desai</h3>
+            <p>Led the deployment of all features on NVIDIA AI Workbench, ensuring smooth integration and performance.</p>
+            <a href="https://www.linkedin.com/in/yugandhar-desai/" class="linkedin-profile" target="_blank">LinkedIn Profile</a>
+        </div>
+
+        <p>The AI System Design Builder represents a significant step forward in how we approach system architecture. By combining the power of AI with human expertise, we're paving the way for more efficient, scalable, and innovative system designs.</p>
+    </div>
+</body>
+</html>
