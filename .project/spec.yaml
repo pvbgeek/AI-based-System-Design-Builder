@@ -1,0 +1,4 @@
+app_name: ai-based-system-design-builder
+base_img: python:3.9-slim
+description: AI-based System Design Builder application
+mount_workspace: true
